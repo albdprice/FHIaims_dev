@@ -1,0 +1,44 @@
+# Expects to be passed the L value as a quoted parameter ($0)
+#
+set style data lines
+#
+set multiplot
+set size 0.5,0.5
+set origin 0.0,0.0
+plot [0:4] 'PSPOTR'.ARG1 using 1:2 title "l=".ARG1." Pseudopot r"  with lines,\
+           0.0 notitle with lines lt 0
+##### goes offscale...  'PSPOTR$0' using 1:3 notitle  with linespoints
+
+set origin 0.5,0.0
+plot [0:20] 'PSPOTQ'.ARG1 using 1:2 title "l=".ARG1." Pseudopot q"  with lines,\
+           0.0 notitle with lines lt 0
+#
+set origin 0.0,0.5
+
+plot [0:4] 'AEWFNR'.ARG1 using 1:2 title "AE wfn l=".ARG1  with lines, \
+           'PSWFNR'.ARG1 using 1:2 title "PS wfn l=".ARG1  with lines, \
+           0.0 notitle with lines lt 0
+set origin 0.5,0.5
+#
+# Logarithmic derivative
+#
+# Note: This macro trick seems to be needed in newer versions of gnuplot
+#
+set macro
+sentinel="AELOGD".ARG1
+there_is_logd=`test -f @sentinel && echo 1 || echo 0`
+
+if (there_is_logd == 1) \
+plot 'AELOGD'.ARG1 us 1:2  ti "AE logder l=".ARG1 ,\
+     'PSLOGD'.ARG1 us 1:2 ti "PS logder l=".ARG1  ,\
+     'AEEV'.ARG1 us 1:2 notitle with points
+#
+set nomultiplot
+
+#pause -1 "Hit return to end"
+
+
+
+
+
+

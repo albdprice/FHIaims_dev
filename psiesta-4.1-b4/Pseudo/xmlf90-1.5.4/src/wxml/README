@@ -1,0 +1,7 @@
+There are further enhancements in the Siesta distribution:
+
+- Use of (home-made) dynamic strings in the stack and dictionary modules.
+- Use of error-handling routines
+- New overloads for the add_pcdata and add_attribute interfaces
+- New overloads for the str interface
+

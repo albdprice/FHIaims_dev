@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libOMM.a  CMakeFiles/OMM.dir/src/libOMM/omm_params.f90.o CMakeFiles/OMM.dir/src/libOMM/omm_rand.f90.o CMakeFiles/OMM.dir/src/libOMM/omm_quartic.f90.o CMakeFiles/OMM.dir/src/libOMM/omm_ops.f90.o CMakeFiles/OMM.dir/src/libOMM/omm.f90.o CMakeFiles/OMM.dir/src/libOMM/omm_callback.f90.o
+/usr/bin/ranlib ../../lib/libOMM.a

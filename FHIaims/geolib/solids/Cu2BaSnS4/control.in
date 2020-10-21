@@ -1,0 +1,4 @@
+xc 		pbe
+k_grid		8 8 8
+relativistic	atomic_zora scalar
+dry_run

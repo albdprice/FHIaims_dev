@@ -1,0 +1,6 @@
+This is a simple XML parsing example contributed by Jon Wakelin
+(jwak02@esc.cam.ac.uk).
+
+It reports the number of appearances in the document of different elements.
+
+

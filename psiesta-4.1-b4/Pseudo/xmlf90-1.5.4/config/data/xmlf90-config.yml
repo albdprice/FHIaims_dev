@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+
+config:
+  package: "xmlf90"
+  version: "1.5.4"
+  timestamp: "20190613T163617-0400"
+
+target:
+  cpu: "x86_64"
+  vendor: "pc"
+  os: "linux-gnu"
+
+compilers:
+  CPP: "gcc -E"
+  CPPFLAGS: ""
+  CC: "gcc"
+  CFLAGS: "-g -O2"
+  FC: "gfortran"
+  FCFLAGS: "-g -O2"
+  LDFLAGS: ""
+  LIBS: ""
+  DOXYGEN: ""
+  MAKINDEX: ""
+  PDFLATEX: ""
+
+options:
+  docgen: "no"
+
+...

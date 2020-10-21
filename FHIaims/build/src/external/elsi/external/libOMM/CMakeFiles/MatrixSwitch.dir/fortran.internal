@@ -1,0 +1,9 @@
+# The fortran modules provided by this target.
+provides
+ matrixswitch
+ matrixswitch_ops
+ ms_m_add
+ ms_m_copy
+ ms_m_register
+ ms_m_set
+ ms_mm_multiply

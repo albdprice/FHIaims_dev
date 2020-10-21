@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaims4.a  CMakeFiles/aims4.dir/__/__/src/read_control.f90.o
+/usr/bin/ranlib libaims4.a

@@ -1,0 +1,31 @@
+KNOWN ISSUES as of version 1.5
+
+* It accepts only single-byte encodings for characters. 
+
+* Currently, there are hard-wired limits on the length of element
+  and attribute identifiers, and the length of attribute values and
+  unbroken (i.e., without whitespace) PCDATA sections.  The limit is
+  set in sax/m_buffer.f90 to MAX_BUFF_SIZE=1024.
+
+* Overly long comments and SGML declarations can also be truncated,
+  but the effect is currently harmless since the parser does not make
+  use of that information. In a future version there could be a more
+  robust retrieval mechanism.
+
+* The number of attributes is limited to MAX_ITEMS=64
+  in sax/m_dictionary.f90.
+
+* In the XPATH interface, returned PCDATA character buffers cannot be
+  larger than an internal size of MAX_PCDATA_SIZE=65536 set in
+  xpath/m_path.f90.
+
+* The XPATH API is not solid yet, particularly in the area of contexts
+  handling.  A new one could be defined using the DOM module, but, not
+  being stream-oriented, it will loose its small memory footprint and
+  speed.
+
+
+
+
+
+

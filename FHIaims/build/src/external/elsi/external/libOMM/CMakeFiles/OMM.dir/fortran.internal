@@ -1,0 +1,5 @@
+# The fortran modules provided by this target.
+provides
+ omm_ops
+ omm_params
+ omm_rand

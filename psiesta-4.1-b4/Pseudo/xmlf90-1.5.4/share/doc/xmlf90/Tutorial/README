@@ -1,0 +1,15 @@
+See UserGuide.pdf for a tutorial and a reference to the 
+SAX and stream XPATH parser APIs.
+
+The sax and xpath directories contain the source for the exercises in
+the User Guide.
+
+The DOM interface is documented in DOM.md (in Markdown format) and
+html/DOM.html (directly readable in a web browser).
+
+The WXML writing library and the "Jumbo90" (CML writer by Jon Wakelin)
+are documented altogether in WXML.md, as well as separately in
+html/WXML.html, html/jumbo.html and html/jumbodocs.html.
+
+A brief introduction to the library and its underlying concepts can be
+found in Overview.md.

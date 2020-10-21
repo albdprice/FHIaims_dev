@@ -1,0 +1,28 @@
+This directory contains a very simple but complete example of the use
+of the XML parser.
+
+The program, in file "example.f90", uses the module "m_handlers", which
+contains the handlers for the basic events:  begin_element, end_element, and 
+pcdata_chunk, as well as for the other, less useful events: XML and SGML
+declarations, and comments.
+
+The program opens the XML file, obtaining a file object, and calls
+xml_parse with the above handlers.
+
+In this particular case, the handler action is just to print out 
+element/attribute information, and to dump any PCDATA sections, comments, and
+declarations, but "test.xml" shows all the constructs that the parser
+recognizes: standard and character entities, CDATA sections, etc.
+
+Turning on the 'verbose' flag in the call to xml_parse will result in a
+more detailed look at the workings of the parser.
+
+Type 'make' to compile, and 'example' to execute.
+
+**
+
+As a trivial example, the program xmlcheck will just check for
+well-formedness and print a count of characters processed. The
+name of the input file is hardwired to "INP" (one should of course
+pick it from the command line, perhaps using the f2kcli module).
+

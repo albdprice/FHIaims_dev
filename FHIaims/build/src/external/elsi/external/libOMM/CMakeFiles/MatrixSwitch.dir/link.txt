@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libMatrixSwitch.a  CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/MatrixSwitch_ops.f90.o CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/ms_mm_multiply.f90.o CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/ms_m_add.f90.o CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/ms_m_set.f90.o CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/ms_m_copy.f90.o CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/ms_m_register.f90.o CMakeFiles/MatrixSwitch.dir/src/MatrixSwitch/MatrixSwitch.f90.o
+/usr/bin/ranlib ../../lib/libMatrixSwitch.a

@@ -1,0 +1,17 @@
+This directory contains a very simple example of the use
+of the XML parser.
+
+The program, in file "example.f90", uses the module "m_handlers", which
+contains the handlers for the basic events:  begin_element, end_element, and 
+pcdata_chunk.
+
+The program opens the XML file, obtaining a file object, and calls
+xml_parse with the above handlers.
+
+In this particular case, the handlers' action is just to print out 
+element/attribute information, and to dump any PCDATA sections.
+
+Turning on the 'verbose' flag in the call to xml_parse will result in a
+more detailed look at the workings of the parser.
+
+Type 'make' to compile, and 'example' to execute.

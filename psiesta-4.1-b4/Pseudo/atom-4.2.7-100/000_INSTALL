@@ -1,0 +1,46 @@
+
+* This is the first modern version of ATOM that is made available
+(to academic users only) separately from Siesta.
+
+To compile it, you need the xmlf90 and libGridXC libraries, which can
+be downloaded from Launchpad:
+
+http://launchpad.net/libgridxc
+http://launchpad.net/xmlf90
+
+** Steps in detail
+
+- Prepare an arch.make file in the main directory of the ATOM distribution.
+  Look at arch.make.sample for inspiration.
+
+- Dowload and unpack the library tarballs:
+   ( Use the appropriate latest versions from Launchpad )
+
+  tar xzvf xmlf90-1.5.3.tgz
+  tar xzvf libgridxc-0.8.0.tgz   
+
+- Compile the libGridXC and xmlf90 libraries (follow the instructions
+  in the appropriate packages). You can optionally compile libGridXC with
+  libxc support.
+
+- Go back to the ATOM top directory and review the settings of the
+  xmlf90 and libGridXC import lines. For example:
+
+include $(XMLF90_ROOT)/share/org.siesta-project/xmlf90.mk
+include $(GRIDXC_ROOT)/gridxc.mk
+
+  NOTE: The building mechanism for Siesta-related libraries is still
+  being refined. The above paths below $(XMLF90_ROOT) and $(GRIDXC_ROOT)
+  might change with different versions of the libraries. Check their
+  installation trees and use the appropriate path to the .mk file.
+  
+- Type
+
+    make
+
+  to compile the program.
+  
+
+    
+  
+

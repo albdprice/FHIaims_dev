@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+
+config:
+  package: "@PACKAGE@"
+  version: "@VERSION@"
+  timestamp: "@x90_timestamp@"
+
+target:
+  cpu: "@target_cpu@"
+  vendor: "@target_vendor@"
+  os: "@target_os@"
+
+compilers:
+  CPP: "@CPP@"
+  CPPFLAGS: "@CPPFLAGS@"
+  CC: "@CC@"
+  CFLAGS: "@CFLAGS@"
+  FC: "@FC@"
+  FCFLAGS: "@FCFLAGS@"
+  LDFLAGS: "@LDFLAGS@"
+  LIBS: "@LIBS@"
+  DOXYGEN: "@DOXYGEN@"
+  MAKINDEX: "@MAKEINDEX@"
+  PDFLATEX: "@PDFLATEX@"
+
+options:
+  docgen: "@x90_docgen_enable@"
+
+...

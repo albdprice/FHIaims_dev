@@ -1,0 +1,5 @@
+Two examples of the use of the WXML library.
+
+simple.f90 : Basic syntax and features
+
+pseudo.f90 : A real-life example. Converts a legacy file into a XML format.

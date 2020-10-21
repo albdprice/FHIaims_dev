@@ -1,0 +1,4 @@
+         USE MPI__GXC_r4_V      ;  USE MPI__GXC_r4_S
+         USE MPI__GXC_c4_V      ;  USE MPI__GXC_c4_S
+         USE MPI__GXC_r8_V      ;  USE MPI__GXC_r8_S
+         USE MPI__GXC_c8_V      ;  USE MPI__GXC_c8_S

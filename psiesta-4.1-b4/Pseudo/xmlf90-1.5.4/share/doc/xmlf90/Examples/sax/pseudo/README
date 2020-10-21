@@ -1,0 +1,24 @@
+This directory contains a real-world example of processing an XML file.
+
+Pseudo.xml is a prototype XML pseudopotential file, containing, apart
+from identification information, several datasets representing functions
+of a radial coordinate. These functions are given as tables with an underlying 
+grid. The grid can be common to all, or each radial function ("radfunc") can
+have its own.
+
+The program reads the XML file and then constructs a data structure
+with all the information in the file, ready to be processed by other
+utilities, such as an electronic-structure program.
+
+Pseudo.xml is just a prototype, and this program is just an illustration
+of the kinds of idioms one can use to process a non-trivial XML file
+using a SAX-like parser.
+
+The basic data structures are defined in module m_pseudo_types, and the 
+handlers are in m_pseudo.f90.
+
+Type 'make' to compile, and 'pseudo' to execute.
+(In the interest of simplicity, this program is hardwired to process
+the 'pseudo.xml' file. For command-line control, one could use the
+routines in the f2kcli module.)
+

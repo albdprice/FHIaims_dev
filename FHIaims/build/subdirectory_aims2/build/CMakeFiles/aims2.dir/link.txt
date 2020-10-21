@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaims2.a  CMakeFiles/aims2.dir/__/__/src/calculate_fock_matrix_p0.f90.o
+/usr/bin/ranlib libaims2.a

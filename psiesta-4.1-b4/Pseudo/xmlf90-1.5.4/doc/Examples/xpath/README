@@ -1,0 +1,10 @@
+Examples of use of the XPATH API for XML parsing.
+
+text		: Extracts text from an element.
+relative	: Illustrates relative searches.
+pseudo		: A more complete example of the use of the XPATH API. It
+                  replicates the functionality of the SAX example of the 
+                  same name, illustrating in particular the concept of
+                  context delegation.
+
+Just type "make" to build all three examples.

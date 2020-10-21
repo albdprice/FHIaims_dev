@@ -1,0 +1,19 @@
+# The fortran modules provided by this target.
+provides
+ aligned_mem
+ check_pd
+ complex_generic_kernel
+ compute_hh_trafo_complex
+ compute_hh_trafo_real
+ elpa1
+ elpa1_auxiliary
+ elpa1_compute
+ elpa2
+ elpa2_compute
+ elpa2_utilities
+ elpa_mpi
+ elpa_utilities
+ pack_unpack_complex
+ pack_unpack_real
+ precision
+ single_hh_trafo_real

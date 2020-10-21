@@ -1,0 +1,271 @@
+-------------------------------------------------------
+2018-11-01                           libGridXC-devel-42
+Fix allocation size in cellxc
+
+(The bug was harmless, as the size used (nf after a loop) was at least
+as large as the right one (nXCfuncs).)
+
+-------------------------------------------------------
+2018-11-01                           libGridXC-devel-41
+Add support for libXC v4 (bug-fix)
+
+(Fixed faulty logic in previous commit)
+
+LibGridXC can now work with recent versions of libXC. An interface
+change in v4 regarding the relativistic LDA exchange is now
+automatically handled by checking the version number of the library
+pointed to by the LIBXC_ROOT variable.
+
+Compatibility spans now versions libXC-2.2.3 to libXC-4.2.3.
+-------------------------------------------------------
+2018-10-31                           libGridXC-devel-40
+(Faulty commit)
+-------------------------------------------------------
+2018-02-01                           libGridXC-devel-39
+Improvements to building system. Dual serial/mpi hierarchy
+  
+- The 'build.sh' script harnesses the standard makefile to build an
+  alternative hierarchy of the form
+
+   ROOT
+       gridxc.mk, libxc.mk
+       serial/
+          ...
+       mpi/
+          ...
+
+  Each of the 'serial' and 'mpi' subdirectories are complete
+  installations of libGridXC. The top-level gridxc.mk defines the
+  appropriate LIBS and INCFLAGS variables depending on the setting of
+  the WITH_MPI variable, that can be set in client makefiles.
+
+- The auxiliary libxc.mk file is automatically installed.
+
+- A local installation is always done (./lib, ./include)
+
+- Simpler makefile for Testers, using local installation
+            
+- The fortran.mk file must include FC_SERIAL and FC_PARALLEL symbols.
+-------------------------------------------------------
+2017-11-02                           libGridXC-devel-38
+Fix variable name in non-libxc version
+
+Due to an oversight, the non-libxc code blocks in atomxc and cellxc
+were using a non-existent variable name.
+
+-------------------------------------------------------
+2017-10-30                           libGridXC-devel-37
+Reduce overhead by instantiating libxc objects outside grid loop
+      
+By setting up the libxc objects beforehand and passing them to the
+worker routines ldaxc and ggaxc, we save the overhead of instantiating
+and deinstatiating them at every grid point.
+
+Note that the VDW subsystem is not affected: it does not use libxc
+at all.
+
+-------------------------------------------------------
+2017-10-29                           libGridXC-devel-36
+Fix two bugs in the libxc interface
+
+- The function gridxc_setXC_libxc was assigning incorrect weights to
+  the functional(s).
+
+- In ldaxc and ggaxc, the exchange or correlation components were not
+  set to zero for, respectively, correlation or exchange functionals.
+
+- Added a new test (Testers/test-match) to explore numerical differences
+  between the Soler-Balbas and the libxc results.
+  
+( + Updated Testers/test1 to support arbitrary seed sizes. The reference
+    results have not been changed yet, pending an assessment of the validity
+    of the chosen weights)
+
+-------------------------------------------------------
+2017-08-01                           libGridXC-devel-35
+Use explicit loops in cellxc to avoid temporaries
+
+Rather than using the convenient but opaque array
+syntax, use explicit loops in some places. This
+would avoid temporary arrays and possible bugs.
+
+(Thanks to Nick Papior)
+
+-------------------------------------------------------
+2017-07-07                           libGridXC-devel-34
+Make non-collinear calculations more robust in ggaxc.F
+
+(Thanks to Ramon Cuadrado)
+
+-------------------------------------------------------
+2017-03-01                           libGridXC-devel-33
+Update building logic. Update docs/CHANGES file
+
+To avoid installing an inconsistent gridxc.mk file, the 'install'
+target has been removed.  In a new INSTALL file, it is stressed that a
+'make clean' command be issued before the actual building.
+
+Libxc-specific tests are built if support for libxc is compiled in.
+
+Update also version.info to match bzr revno.
+
+
+-------------------------------------------------------
+revno: 32
+committer: Alberto Garcia <albertog@icmab.es>
+branch nick: libgridxc
+timestamp: Fri 2017-02-17 16:26:14 +0100
+message:
+  Echo message on libxc in gridxc.mk
+------------------------------------------------------------
+revno: 31 [merge]
+fixes bug: https://launchpad.net/bugs/1665294
+author: Nick Papior <nickpapior@gmail.com>
+committer: Alberto Garcia <albertog@icmab.es>
+branch nick: libgridxc
+timestamp: Fri 2017-02-17 12:46:13 +0100
+message:
+  Avoid 'reshape' intrinsic. Remove gather buffer. Wrap libxc code
+  
+  (Thanks to Nick Papior)
+  
+  * The RESHAPE intrinsic will in many cases create a temporary array to
+  ensure that the array is consecutive in memory, and then perform the
+  copy. However, when dealing with large arrays this becomes very heavy
+  on memory and it is better to force a linear copy on the arrays. To
+  fix this a new module is added which implements two generic interfaces:
+  
+   array_copy (for copying data)
+    array_add (for adding data)
+  
+  Both implement different dimensions such that one may go from:
+  
+    1D -> 4D
+    4D -> 1D
+  
+  which is very convenient in the present code due to buffer arrays in
+  MPI calls.
+  
+  * Secondly, two calls to MPI_AllGather were adding an unnecessary
+  buffer for receiving. However, when memory is consecutive there is no
+  need to use a buffer array: we simply pass by reference the first
+  memory segment and MPI treats it as a consecutive segment.
+  
+  *  Fixed compilation without LibXC
+  
+  In xcmod the dummy function 'process_libxc_spec' had an erroneous call
+  to array specs. This has been fixed.
+  
+  In gridxc the export of 'setXC_libxc_ids' was not properly wrapped
+  	      
+------------------------------------------------------------
+revno: 30 [merge]
+tags: libgridxc-0.7.0
+committer: Alberto Garcia <albertog@icmab.es>
+branch nick: libgridxc
+timestamp: Wed 2017-01-25 23:29:31 +0100
+message:
+  Enhance the libxc interface
+  
+  The "setxc" suite has been extended:
+  
+  - A new routine setxc_libxc_ids provides a simpler interface to setxc
+    when the libxc codes are known. For example:
+  
+    call setxc_libxc_ids(2,[101, 130])
+  
+    sets up PBE exchange and correlation.
+    
+  - New extended "author" string codes for libxc functionals of the form
+  
+    LIBXC-NNNN-SYMBOLIC_NAME
+  
+    where the symbolic name is optional if NNNN is a valid libxc code,
+    or is used to determine the code if NNNN is zero. So:
+  
+    LIBXC-0101
+    LIBXC-0000-GGA_X_PBE
+  
+    are valid specifications for PBE exchange.
+  
+    The 'setxc' internal structures hold the actual libxc code in the
+    numeric field.
+------------------------------------------------------------
+revno: 29
+tags: libgridxc-0.6.1
+committer: Alberto Garcia <albertog@icmab.es>
+branch nick: libgridxc
+timestamp: Mon 2016-10-31 17:23:50 +0100
+message:
+  Make 'comm' argument mandatory in MPI version
+  
+  This change will trigger an error if a serial version
+  of the library is used in a MPI program, or viceversa.
+  
+  Update Testers/makefile to discover whether a serial
+  or parallel version of the library is used.
+  
+  modified:
+    Testers/makefile
+    src/gridxc_config.F90
+    
+------------------------------------------------------------
+revno: 28 [merge]
+committer: Alberto Garcia <albertog@icmab.es>
+branch nick: libgridxc
+timestamp: Thu 2016-07-07 16:51:24 +0200
+message:
+  Make the building system more robust and streamlined
+  
+  VPATH mechanism
+  LIBXC support
+  MPI support
+  
+  removed:
+    extra/lib-arch.mpi.make
+    extra/serial-lib-arch.make
+    gridxc.mk
+  added:
+    extra/fortran.mk
+    extra/libxc.mk
+    src/config.sh
+    src/gridxc.mk.in
+  renamed:
+    src/Testers/ => Testers/
+  modified:
+    00_README
+    Testers/makefile
+    src/MPI_instr/Makefile
+    src/MPI_instr/mpi_instr.f90
+    src/gridxc_config.F90
+    src/ldaxc.F
+    src/makefile
+-------------------------------------------------------
+2016-06-01                           libGridXC-devel-27
+Fix inconsistency in libxc interface for combined functionals
+
+This fixes bug lp:1587887
+
+-------------------------------------------------------
+2016-06-01                           libGridXC-devel-26
+Apply minimum-density fix for nc case
+
+Thanks to Ramón Cuadrado for the fix in ggaxc.F
+      
+-------------------------------------------------------
+2016-05-28                           (libGridXC-devel-25)
+Fix MPI issue of redundant interfaces
+
+An obscure problem with ambiguous generic interfaces has been solved
+by using a new file 'mpi__include' which exports only a reduced set of
+mpi symbols.
+      
+-------------------------------------------------------
+2016-05-09                           libGridXC-devel-24
+Update building mechanism
+
+- New subdirectory 'src'.
+- Simple 'install' target for local installation.
+- Updated README file.
+- New gridxc.mk symbol file.
+

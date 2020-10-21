@@ -1,0 +1,101 @@
+
+To compile the library:
+
+* Create a building directory at the top level. For example:
+
+  mkdir Gfortran
+  
+* Create a fortran.mk file along the lines of the sample provided in
+  the 'extra' directory and put it in the building directory.
+  Make sure that you define the symbol FC_SERIAL (instead of just FC)
+  to point to your standard fortran compiler. If you plan to build the
+  parallel version of the library, define also FC_PARALLEL to point to
+  your MPI wrapper (typically mpif90).
+
+*  Type, from the building directory
+
+      sh ../src/config.sh
+
+   to populate the building directory with makefiles and other
+   supporting files.
+
+*  Now, for a local installation of the library and modules, type:
+
+    **NOTE**: The 'make clean' step is essential in all what follows.
+
+      make clean
+      make
+
+   To install in a different place, include a PREFIX definition:
+
+      make clean
+      make PREFIX=/path/to/installation
+
+* For MPI operation:
+
+      make clean
+      make WITH_MPI=1 PREFIX=/path/to/installation 
+
+  assuming that your MPI installation includes a 'mpif90' wrapper
+  compiler.  This is the easiest option. Otherwise you will have to
+  define the MPI_INCFLAGS variable in the fortran.mk file, and
+  possibly other things.
+
+  It is suggested to install two versions of gridxc, serial and
+  parallel, in two subtrees of an installation tree.
+  The 'build.sh' script can be used for that. For example:
+
+  WITH_LIBXC=1  WITH_MPI=1 PREFIX=/path/to/installation sh build.sh
+
+  (see full details in the src/build.sh script itself)
+
+* To include libXC support, define the LIBXC_ROOT variable pointing to
+  the top of your libxc installation. You can do this in the makefile itself,
+  or elsewhere (e.g., in an environment module).
+
+  Compilation has been tested with libxc-2.2.3, libxc-3.0.0, and
+  libxc-4.2.3. Interface changes accross versions, if any, are dealt
+  with automatically through pre-processed code that checks the libxc
+  version information. The contents of the src/libxc.mk file are
+  appropriate up to at least v4.2.3. If relevant details (e.g. the
+  names of the libraries) change in future versions of libXC this file
+  should be updated.
+
+  Then, use 'WITH_LIBXC=1' in the invokation of 'make'. For example:
+  
+      make clean
+      make WITH_LIBXC=1 PREFIX=/path/to/installation
+
+* To include both MPI and LIBXC support, combine the above definitions:
+
+      make clean
+      make WITH_LIBXC=1 WITH_MPI=1 PREFIX=/path/to/installation
+
+  or, to use a common tree for serial and parallel versions:
+
+      WITH_LIBXC=1  WITH_MPI=1 PREFIX=/path/to/installation sh build.sh
+
+To use GridXC in your program:
+   
+*) Provide handlers for several routines which are called from
+   internal modules in GridXC. A simple version is in
+   extra/handlers.f90.
+
+*) Include in your makefile $(GRIDXC_ROOT)/gridxc.mk, where
+   GRIDXC_ROOT points to the root of your installation of
+   libGridXC. This will define the symbols:
+   
+     $(GRIDXC_INCFLAGS)
+     $(GRIDXC_LIBS)
+
+   that can be used to have the compiler search the right places for
+   the appropriate modules and libraries.  If any module name
+   conflicts with your main program you will have to edit and change
+   the conflicting module names in either your program (or tell us, to
+   try to fix the GridXC library...)
+
+   If you are using libxc, define the variable LIBXC_ROOT so that it
+   is available to the building process.
+
+   Alberto Garcia
+   albertog@icmab.es

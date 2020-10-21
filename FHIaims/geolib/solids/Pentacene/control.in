@@ -1,0 +1,4 @@
+xc 		pbe
+k_grid		6 4 2
+vdw_correction_hirshfeld
+dry_run

@@ -1,0 +1,402 @@
+The system is: Linux - 4.15.0-1059-oem - x86_64
+Compiling the Fortran compiler identification source file "CMakeFortranCompilerId.F" succeeded.
+Compiler: /opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90 
+Build flags: -O3;-ip;-fp-model;precise
+Id flags: -v 
+
+The output was:
+0
+mpif90 for the Intel(R) MPI Library 2019 Update 5 for Linux*
+Copyright 2003-2019, Intel Corporation.
+ifort version 19.0.5.281
+/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/fpp    -D__INTEL_COMPILER=1900 -D__INTEL_COMPILER_UPDATE=5 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20190815 -D__INTEL_OFFLOAD -D__i686 -D__i686__ -D__pentiumpro -D__pentiumpro__ -D__tune_i686__ -D__tune_pentiumpro__ -D__pentium4 -D__pentium4__ -D__tune_pentium4__ -D__SSE2__ -D__SSE2_MATH__ -D__SSE__ -D__SSE_MATH__ -D__MMX__ -I. -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include -I/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64 -I/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc -I/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/ -I/usr/include -I/usr/include/x86_64-linux-gnu -fixed -4Ycpp -4Ncvf -f_com=yes -MX CMakeFortranCompilerId.F /tmp/ifortzdVPuN.i
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/7/include
+ /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed
+ /usr/include/
+ /usr/include
+ /usr/include/x86_64-linux-gnu
+End of search list.
+/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/fortcom    -D__INTEL_COMPILER=1900 -D__INTEL_COMPILER_UPDATE=5 -D__unix__ -D__unix -D__linux__ -D__linux -D__gnu_linux__ -Dunix -Dlinux -D__ELF__ -D__x86_64 -D__x86_64__ -D__amd64 -D__amd64__ -D__INTEL_COMPILER_BUILD_DATE=20190815 -D__INTEL_OFFLOAD -D__i686 -D__i686__ -D__pentiumpro -D__pentiumpro__ -D__tune_i686__ -D__tune_pentiumpro__ -D__pentium4 -D__pentium4__ -D__tune_pentium4__ -D__SSE2__ -D__SSE2_MATH__ -D__SSE__ -D__SSE_MATH__ -D__MMX__ -mGLOB_pack_sort_init_list -I. -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include -I/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64 -I/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc -I/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/ -I/usr/include -I/usr/include/x86_64-linux-gnu -noftz "-fp_model precise" "-fp_modbits no_ftz" -omp_simd -O3 "-reentrancy threaded" -simd -offload_host -mGLOB_em64t=TRUE -mP1OPT_version=19.0-intel64 -mGLOB_diag_file=/tmp/ifortl9QqCt.diag -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_source_language=GLOB_SOURCE_LANGUAGE_F90 -mP2OPT_static_promotion -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=740 "-mGLOB_options_string=-I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include -O3 -ip -fp-model precise -v -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -Xlinker -rpath -Xlinker /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -lmpifort -lmpi -lrt -lpthread -Wl,-z,now -Wl,-z,relro -Wl,-z,noexecstack -Xlinker --enable-new-dtags -ldl" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/ifortNWBQgras_.s -mGLOB_dashboard_use_source_name -mIPOPT_activate -mGLOB_uarch_tuning=0x0 -mGLOB_product_id_code=0x22006d91 -mCG_bnl_movbe=T -mGLOB_extended_instructions=0x8 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=ifort1503657588h2Sv8b -mGLOB_opt_level=3 -mP2OPT_hlo_level=3 -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/libiml_attr.so -mIPOPT_single_file_compile_and_link=TRUE -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_lto_object_enabled -mIPOPT_lto_object_value=1 -mIPOPT_obj_output_file_name=/tmp/ifortl9QqCt.o -mIPOPT_whole_archive_fixup_file_name=/tmp/ifortwarchYEgd44 -mGLOB_linker_version=2.30 -mGLOB_linker=ld -mGLOB_driver_tempfile_name=/tmp/iforttempfileAdF1Xo -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ifortl9QqCt.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_FORTRAN -mP1OPT_source_file_name=CMakeFortranCompilerId.F -mP1OPT_full_source_file_name=/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/3.10.2/CompilerIdFortran/CMakeFortranCompilerId.F -mP2OPT_symtab_type_copy=true /tmp/ifortzdVPuN.i
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/intel64
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include/icc
+ /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/7/include
+ /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed
+ /usr/include/
+ /usr/include
+ /usr/include/x86_64-linux-gnu
+End of search list.
+ld    /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -o a.out /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin/for_main.o -L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-linux-gnu/7/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/ -L/lib/x86_64-linux-gnu/ -L/lib/../lib64 -L/lib/../lib/ -L/usr/lib/x86_64-linux-gnu/ -L/usr/lib/../lib/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../ -L/lib64 -L/lib/ -L/usr/lib -L/usr/lib/i386-linux-gnu /tmp/ifortl9QqCt.o --enable-new-dtags -rpath /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -rpath /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -lmpifort -lmpi -lrt -lpthread -z now -z relro -z noexecstack --enable-new-dtags -ldl -Bdynamic -Bstatic -lifport -lifcoremt -limf -lsvml -Bdynamic -lm -Bstatic -lipgo -lirc -Bdynamic -lpthread -Bstatic -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+
+
+Compilation of the Fortran compiler identification source "CMakeFortranCompilerId.F" produced "a.out"
+
+The Fortran compiler identification is Intel, found in "/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/3.10.2/CompilerIdFortran/a.out"
+
+Determining if the Fortran compiler works passed with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7a600/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7a600.dir/build.make CMakeFiles/cmTC_7a600.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building Fortran object CMakeFiles/cmTC_7a600.dir/testFortranCompiler.f.o
+/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90   -O3 -ip -fp-model precise    -c /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp/testFortranCompiler.f -o CMakeFiles/cmTC_7a600.dir/testFortranCompiler.f.o
+Linking Fortran executable cmTC_7a600
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a600.dir/link.txt --verbose=1
+/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90    -O3 -ip -fp-model precise  CMakeFiles/cmTC_7a600.dir/testFortranCompiler.f.o  -o cmTC_7a600 
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+Detecting Fortran compiler ABI info compiled with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1101/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f1101.dir/build.make CMakeFiles/cmTC_f1101.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building Fortran object CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o
+/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90   -O3 -ip -fp-model precise    -c /usr/share/cmake-3.10/Modules/CMakeFortranCompilerABI.F -o CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o
+Linking Fortran executable cmTC_f1101
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1101.dir/link.txt --verbose=1
+/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90   -v -O3 -ip -fp-model precise  CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o  -o cmTC_f1101 
+mpif90 for the Intel(R) MPI Library 2019 Update 5 for Linux*
+Copyright 2003-2019, Intel Corporation.
+ifort version 19.0.5.281
+/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/fortcom    -mGLOB_em64t=TRUE -mP1OPT_version=19.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.diag -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_source_language=GLOB_SOURCE_LANGUAGE_F90 -mP2OPT_static_promotion -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=740 "-mGLOB_options_string=-I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include -v -O3 -ip -fp-model precise -o cmTC_f1101 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -Xlinker -rpath -Xlinker /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -lmpifort -lmpi -lrt -lpthread -Wl,-z,now -Wl,-z,relro -Wl,-z,noexecstack -Xlinker --enable-new-dtags -ldl" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/ifortXX08bOas_.s -mGLOB_dashboard_use_source_name -mIPOPT_activate -mGLOB_product_id_code=0x22006d91 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=ifort2121964786qqvBWI -mGLOB_opt_level=3 -mP2OPT_hlo_level=3 -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/ifortslisyiHGA8 -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/ifortscripthcLpot "-mIPOPT_cmdline_link="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o" "/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib" "-o" "cmTC_f1101" "/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin/for_main.o" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin" "-L/usr/lib/gcc/x86_64-linux-gnu/7/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/" "-L/lib/x86_64-linux-gnu/" "-L/lib/../lib64" "-L/lib/../lib/" "-L/usr/lib/x86_64-linux-gnu/" "-L/usr/lib/../lib/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib" "-L/usr/lib/i386-linux-gnu" "CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o" "--enable-new-dtags" "-rpath" "/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release" "-rpath" "/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib" "-lmpifort" "-lmpi" "-lrt" "-lpthread" "-z" "now" "-z" "relro" "-z" "noexecstack" "--enable-new-dtags" "-ldl" "-Bdynamic" "-Bstatic" "-lifport" "-lifcoremt" "-limf" "-lsvml" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-lirc" "-Bdynamic" "-lpthread" "-Bstatic" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_ifort447mM7.o -mIPOPT_whole_archive_fixup_file_name=/tmp/ifortwarchrHePNt -mGLOB_linker_version=2.30 -mGLOB_linker=ld -mGLOB_driver_tempfile_name=/tmp/iforttempfileRydMBO -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_ifort447mM7.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.f -mP2OPT_symtab_type_copy=true CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/ifortalisnbMNnN -mIPOPT_generated_tempfiles=/tmp/ifortelisFviwb8 -mIPOPT_embedded_object_base_name=/tmp/iforteobjPIXeZs -mIPOPT_cmdline_link_new_name=/tmp/ifortllis29KXMN
+ld    /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -o cmTC_f1101 /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin/for_main.o -L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-linux-gnu/7/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/ -L/lib/x86_64-linux-gnu/ -L/lib/../lib64 -L/lib/../lib/ -L/usr/lib/x86_64-linux-gnu/ -L/usr/lib/../lib/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../ -L/lib64 -L/lib/ -L/usr/lib -L/usr/lib/i386-linux-gnu CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o --enable-new-dtags -rpath /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -rpath /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -lmpifort -lmpi -lrt -lpthread -z now -z relro -z noexecstack --enable-new-dtags -ldl -Bdynamic -Bstatic -lifport -lifcoremt -limf -lsvml -Bdynamic -lm -Bstatic -lipgo -lirc -Bdynamic -lpthread -Bstatic -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+Parsed Fortran implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f1101/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f1101.dir/build.make CMakeFiles/cmTC_f1101.dir/build]
+  ignore line: [make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building Fortran object CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o]
+  ignore line: [/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90   -O3 -ip -fp-model precise    -c /usr/share/cmake-3.10/Modules/CMakeFortranCompilerABI.F -o CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o]
+  ignore line: [Linking Fortran executable cmTC_f1101]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1101.dir/link.txt --verbose=1]
+  ignore line: [/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90   -v -O3 -ip -fp-model precise  CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o  -o cmTC_f1101 ]
+  ignore line: [mpif90 for the Intel(R) MPI Library 2019 Update 5 for Linux*]
+  ignore line: [Copyright 2003-2019, Intel Corporation.]
+  ignore line: [ifort version 19.0.5.281]
+  ignore line: [/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/fortcom    -mGLOB_em64t=TRUE -mP1OPT_version=19.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.diag -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mGLOB_source_language=GLOB_SOURCE_LANGUAGE_F90 -mP2OPT_static_promotion -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=740 "-mGLOB_options_string=-I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include/gfortran -I/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/include -v -O3 -ip -fp-model precise -o cmTC_f1101 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -Xlinker -rpath -Xlinker /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -lmpifort -lmpi -lrt -lpthread -Wl,-z,now -Wl,-z,relro -Wl,-z,noexecstack -Xlinker --enable-new-dtags -ldl" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/ifortXX08bOas_.s -mGLOB_dashboard_use_source_name -mIPOPT_activate -mGLOB_product_id_code=0x22006d91 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=ifort2121964786qqvBWI -mGLOB_opt_level=3 -mP2OPT_hlo_level=3 -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/ifortslisyiHGA8 -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/ifortscripthcLpot "-mIPOPT_cmdline_link="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o" "/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib" "-o" "cmTC_f1101" "/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin/for_main.o" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin" "-L/usr/lib/gcc/x86_64-linux-gnu/7/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/" "-L/lib/x86_64-linux-gnu/" "-L/lib/../lib64" "-L/lib/../lib/" "-L/usr/lib/x86_64-linux-gnu/" "-L/usr/lib/../lib/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib" "-L/usr/lib/i386-linux-gnu" "CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o" "--enable-new-dtags" "-rpath" "/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release" "-rpath" "/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib" "-lmpifort" "-lmpi" "-lrt" "-lpthread" "-z" "now" "-z" "relro" "-z" "noexecstack" "--enable-new-dtags" "-ldl" "-Bdynamic" "-Bstatic" "-lifport" "-lifcoremt" "-limf" "-lsvml" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-lirc" "-Bdynamic" "-lpthread" "-Bstatic" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_ifort447mM7.o -mIPOPT_whole_archive_fixup_file_name=/tmp/ifortwarchrHePNt -mGLOB_linker_version=2.30 -mGLOB_linker=ld -mGLOB_driver_tempfile_name=/tmp/iforttempfileRydMBO -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_ifort447mM7.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.f -mP2OPT_symtab_type_copy=true CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/ifortalisnbMNnN -mIPOPT_generated_tempfiles=/tmp/ifortelisFviwb8 -mIPOPT_embedded_object_base_name=/tmp/iforteobjPIXeZs -mIPOPT_cmdline_link_new_name=/tmp/ifortllis29KXMN]
+  link line: [ld    /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -o cmTC_f1101 /opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin/for_main.o -L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-linux-gnu/7/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/ -L/lib/x86_64-linux-gnu/ -L/lib/../lib64 -L/lib/../lib/ -L/usr/lib/x86_64-linux-gnu/ -L/usr/lib/../lib/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../ -L/lib64 -L/lib/ -L/usr/lib -L/usr/lib/i386-linux-gnu CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o --enable-new-dtags -rpath /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release -rpath /opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib -lmpifort -lmpi -lrt -lpthread -z now -z relro -z noexecstack --enable-new-dtags -ldl -Bdynamic -Bstatic -lifport -lifcoremt -limf -lsvml -Bdynamic -lm -Bstatic -lipgo -lirc -Bdynamic -lpthread -Bstatic -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+    arg [ld] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release] ==> dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release]
+    arg [-L/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib] ==> dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib]
+    arg [-o] ==> ignore
+    arg [cmTC_f1101] ==> ignore
+    arg [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin/for_main.o] ==> ignore
+    arg [-L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/]
+    arg [-L/lib/x86_64-linux-gnu/] ==> dir [/lib/x86_64-linux-gnu/]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/lib/../lib/] ==> dir [/lib/../lib/]
+    arg [-L/usr/lib/x86_64-linux-gnu/] ==> dir [/usr/lib/x86_64-linux-gnu/]
+    arg [-L/usr/lib/../lib/] ==> dir [/usr/lib/../lib/]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../]
+    arg [-L/lib64] ==> dir [/lib64]
+    arg [-L/lib/] ==> dir [/lib/]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [CMakeFiles/cmTC_f1101.dir/CMakeFortranCompilerABI.F.o] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib] ==> ignore
+    arg [-lmpifort] ==> lib [mpifort]
+    arg [-lmpi] ==> lib [mpi]
+    arg [-lrt] ==> lib [rt]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [-ldl] ==> lib [dl]
+    arg [-Bdynamic] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-lifport] ==> lib [ifport]
+    arg [-lifcoremt] ==> lib [ifcoremt]
+    arg [-limf] ==> lib [imf]
+    arg [-lsvml] ==> lib [svml]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [-Bstatic] ==> ignore
+    arg [-lipgo] ==> lib [ipgo]
+    arg [-lirc] ==> lib [irc]
+    arg [-Bdynamic] ==> ignore
+    arg [-lpthread] ==> lib [pthread]
+    arg [-Bstatic] ==> ignore
+    arg [-lsvml] ==> lib [svml]
+    arg [-Bdynamic] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc_s] ==> lib [irc_s]
+    arg [-Bdynamic] ==> ignore
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release] ==> [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release]
+  collapse library dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib] ==> [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib]
+  collapse library dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu/] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/lib/../lib/] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu/] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib/] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../] ==> [/usr/lib]
+  collapse library dir [/lib64] ==> [/lib64]
+  collapse library dir [/lib/] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  implicit libs: [mpifort;mpi;rt;pthread;dl;ifport;ifcoremt;imf;svml;m;ipgo;irc;pthread;svml;c;gcc;gcc_s;irc_s;dl;c]
+  implicit dirs: [/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib/release;/opt/intel/compilers_and_libraries_2019.5.281/linux/mpi/intel64/lib;/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin;/usr/lib/gcc/x86_64-linux-gnu/7;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib64;/lib;/usr/lib/i386-linux-gnu]
+  implicit fwks: []
+
+
+Determining if the Fortran compiler supports Fortran 90 passed with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f21c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f21c.dir/build.make CMakeFiles/cmTC_8f21c.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building Fortran object CMakeFiles/cmTC_8f21c.dir/testFortranCompilerF90.f90.o
+/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90   -O3 -ip -fp-model precise    -c /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp/testFortranCompilerF90.f90 -o CMakeFiles/cmTC_8f21c.dir/testFortranCompilerF90.f90.o
+Linking Fortran executable cmTC_8f21c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f21c.dir/link.txt --verbose=1
+/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpif90    -O3 -ip -fp-model precise  CMakeFiles/cmTC_8f21c.dir/testFortranCompilerF90.f90.o  -o cmTC_8f21c 
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/intel/bin/icc 
+Build flags: -O3;-ip;-fp-model;precise
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Intel, found in "/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f0ac7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f0ac7.dir/build.make CMakeFiles/cmTC_f0ac7.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0ac7.dir/testCCompiler.c.o
+/opt/intel/bin/icc   -O3 -ip -fp-model precise    -o CMakeFiles/cmTC_f0ac7.dir/testCCompiler.c.o   -c /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_f0ac7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0ac7.dir/link.txt --verbose=1
+/opt/intel/bin/icc -O3 -ip -fp-model precise     -rdynamic CMakeFiles/cmTC_f0ac7.dir/testCCompiler.c.o  -o cmTC_f0ac7 
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_97160/fast"
+/usr/bin/make -f CMakeFiles/cmTC_97160.dir/build.make CMakeFiles/cmTC_97160.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o
+/opt/intel/bin/icc   -O3 -ip -fp-model precise    -o CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_97160
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97160.dir/link.txt --verbose=1
+/opt/intel/bin/icc -O3 -ip -fp-model precise    -v -rdynamic CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o  -o cmTC_97160 
+icc version 19.0.5.281 (gcc version 7.4.0 compatibility)
+/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/mcpcom    -mGLOB_em64t=TRUE -mP1OPT_version=19.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.diag -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=740 "-mGLOB_options_string=-O3 -ip -fp-model precise -v -rdynamic -o cmTC_97160" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/iccHPeHapas_.s -mGLOB_dashboard_use_source_name -mIPOPT_activate -mGLOB_product_id_code=0x22006d93 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mP2OPT_disam_assume_ansi_c -mP2OPT_checked_disam_ansi_alias=TRUE -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mP2OPT_il0_array_sections=TRUE -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=icc1540508026t2Hl9k -mGLOB_opt_level=3 -mP2OPT_hlo_level=3 -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/iccslisJr9MVG -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/iccscriptuJ6e32 "-mIPOPT_cmdline_link="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o" "/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o" "-export-dynamic" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-o" "cmTC_97160" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin" "-L/usr/lib/gcc/x86_64-linux-gnu/7/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/" "-L/lib/x86_64-linux-gnu/" "-L/lib/../lib64" "-L/lib/../lib/" "-L/usr/lib/x86_64-linux-gnu/" "-L/usr/lib/../lib/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib" "-L/usr/lib/i386-linux-gnu" "CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o" "-Bdynamic" "-Bstatic" "-limf" "-lsvml" "-lirng" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-ldecimal" "--as-needed" "-Bdynamic" "-lcilkrts" "-lstdc++" "--no-as-needed" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_iccJ317cy.o -mIPOPT_whole_archive_fixup_file_name=/tmp/iccwarchATfQp7 -mGLOB_linker_version=2.30 -mGLOB_linker=ld -mGLOB_driver_tempfile_name=/tmp/icctempfilea2kxxt -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_iccJ317cy.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.c CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/iccalisjLz0rg -mIPOPT_generated_tempfiles=/tmp/icceliscq2rzC -mIPOPT_embedded_object_base_name=/tmp/icceobjMrCTGY -mIPOPT_cmdline_link_new_name=/tmp/icclliss8jlOk
+ld    /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -export-dynamic --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTC_97160 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-linux-gnu/7/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/ -L/lib/x86_64-linux-gnu/ -L/lib/../lib64 -L/lib/../lib/ -L/usr/lib/x86_64-linux-gnu/ -L/usr/lib/../lib/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../ -L/lib64 -L/lib/ -L/usr/lib -L/usr/lib/i386-linux-gnu CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o -Bdynamic -Bstatic -limf -lsvml -lirng -Bdynamic -lm -Bstatic -lipgo -ldecimal --as-needed -Bdynamic -lcilkrts -lstdc++ --no-as-needed -lgcc -lgcc_s -Bstatic -lirc -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_97160/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_97160.dir/build.make CMakeFiles/cmTC_97160.dir/build]
+  ignore line: [make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/intel/bin/icc   -O3 -ip -fp-model precise    -o CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_97160]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97160.dir/link.txt --verbose=1]
+  ignore line: [/opt/intel/bin/icc -O3 -ip -fp-model precise    -v -rdynamic CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o  -o cmTC_97160 ]
+  ignore line: [icc version 19.0.5.281 (gcc version 7.4.0 compatibility)]
+  ignore line: [/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/mcpcom    -mGLOB_em64t=TRUE -mP1OPT_version=19.0-intel64 -mGLOB_diag_file=CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.diag -mGLOB_long_size_64 -mGLOB_routine_pointer_size_64 -mP1OPT_print_version=FALSE -mCG_use_gas_got_workaround=F -mP2OPT_align_option_used=TRUE -mGLOB_gcc_version=740 "-mGLOB_options_string=-O3 -ip -fp-model precise -v -rdynamic -o cmTC_97160" -mGLOB_cxx_limited_range=FALSE -mCG_extend_parms=FALSE -mGLOB_compiler_bin_directory=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64 -mGLOB_as_output_backup_file_name=/tmp/iccHPeHapas_.s -mGLOB_dashboard_use_source_name -mIPOPT_activate -mGLOB_product_id_code=0x22006d93 -mP3OPT_use_mspp_call_convention -mP2OPT_subs_out_of_bound=FALSE -mP2OPT_disam_type_based_disam=2 -mP2OPT_disam_assume_ansi_c -mP2OPT_checked_disam_ansi_alias=TRUE -mGLOB_ansi_alias -mPGOPTI_value_profile_use=T -mGLOB_opt_report_use_source_name -mP2OPT_il0_array_sections=TRUE -mGLOB_offload_mode=1 -mP2OPT_offload_unique_var_string=icc1540508026t2Hl9k -mGLOB_opt_level=3 -mP2OPT_hlo_level=3 -mP2OPT_hlo -mP2OPT_hpo_rtt_control=0 -mIPOPT_args_in_regs=0 -mP2OPT_disam_assume_nonstd_intent_in=FALSE -mGLOB_imf_mapping_library=/opt/intel/compilers_and_libraries_2019.5.281/linux/bin/intel64/libiml_attr.so -mPGOPTI_gen_threadsafe_level=0 -mIPOPT_link -mIPOPT_ipo_activate -mIPOPT_mo_activate -mIPOPT_source_files_list=/tmp/iccslisJr9MVG -mIPOPT_mo_global_data -mIPOPT_link_script_file=/tmp/iccscriptuJ6e32 "-mIPOPT_cmdline_link="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o" "/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o" "-export-dynamic" "--eh-frame-hdr" "--build-id" "-dynamic-linker" "/lib64/ld-linux-x86-64.so.2" "-m" "elf_x86_64" "-o" "cmTC_97160" "-L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin" "-L/usr/lib/gcc/x86_64-linux-gnu/7/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/" "-L/lib/x86_64-linux-gnu/" "-L/lib/../lib64" "-L/lib/../lib/" "-L/usr/lib/x86_64-linux-gnu/" "-L/usr/lib/../lib/" "-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../" "-L/lib64" "-L/lib/" "-L/usr/lib" "-L/usr/lib/i386-linux-gnu" "CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o" "-Bdynamic" "-Bstatic" "-limf" "-lsvml" "-lirng" "-Bdynamic" "-lm" "-Bstatic" "-lipgo" "-ldecimal" "--as-needed" "-Bdynamic" "-lcilkrts" "-lstdc++" "--no-as-needed" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc" "-lsvml" "-Bdynamic" "-lc" "-lgcc" "-lgcc_s" "-Bstatic" "-lirc_s" "-Bdynamic" "-ldl" "-lc" "/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o" "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o"" -mIPOPT_il_in_obj -mIPOPT_ipo_activate_warn=FALSE -mIPOPT_obj_output_file_name=/tmp/ipo_iccJ317cy.o -mIPOPT_whole_archive_fixup_file_name=/tmp/iccwarchATfQp7 -mGLOB_linker_version=2.30 -mGLOB_linker=ld -mGLOB_driver_tempfile_name=/tmp/icctempfilea2kxxt -mP3OPT_asm_target=P3OPT_ASM_TARGET_GAS -mGLOB_async_unwind_tables=TRUE -mGLOB_obj_output_file=/tmp/ipo_iccJ317cy.o -mGLOB_source_dialect=GLOB_SOURCE_DIALECT_NONE -mP1OPT_source_file_name=ipo_out.c CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o -mIPOPT_object_files=T -mIPOPT_assembly_files=/tmp/iccalisjLz0rg -mIPOPT_generated_tempfiles=/tmp/icceliscq2rzC -mIPOPT_embedded_object_base_name=/tmp/icceobjMrCTGY -mIPOPT_cmdline_link_new_name=/tmp/icclliss8jlOk]
+  link line: [ld    /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -export-dynamic --eh-frame-hdr --build-id -dynamic-linker /lib64/ld-linux-x86-64.so.2 -m elf_x86_64 -o cmTC_97160 -L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-linux-gnu/7/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/ -L/lib/x86_64-linux-gnu/ -L/lib/../lib64 -L/lib/../lib/ -L/usr/lib/x86_64-linux-gnu/ -L/usr/lib/../lib/ -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../ -L/lib64 -L/lib/ -L/usr/lib -L/usr/lib/i386-linux-gnu CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o -Bdynamic -Bstatic -limf -lsvml -lirng -Bdynamic -lm -Bstatic -lipgo -ldecimal --as-needed -Bdynamic -lcilkrts -lstdc++ --no-as-needed -lgcc -lgcc_s -Bstatic -lirc -lsvml -Bdynamic -lc -lgcc -lgcc_s -Bstatic -lirc_s -Bdynamic -ldl -lc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+    arg [ld] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_97160] ==> ignore
+    arg [-L/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin] ==> dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/]
+    arg [-L/lib/x86_64-linux-gnu/] ==> dir [/lib/x86_64-linux-gnu/]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/lib/../lib/] ==> dir [/lib/../lib/]
+    arg [-L/usr/lib/x86_64-linux-gnu/] ==> dir [/usr/lib/x86_64-linux-gnu/]
+    arg [-L/usr/lib/../lib/] ==> dir [/usr/lib/../lib/]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../]
+    arg [-L/lib64] ==> dir [/lib64]
+    arg [-L/lib/] ==> dir [/lib/]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [CMakeFiles/cmTC_97160.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-limf] ==> lib [imf]
+    arg [-lsvml] ==> lib [svml]
+    arg [-lirng] ==> lib [irng]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [-Bstatic] ==> ignore
+    arg [-lipgo] ==> lib [ipgo]
+    arg [-ldecimal] ==> lib [decimal]
+    arg [--as-needed] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-lcilkrts] ==> lib [cilkrts]
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [--no-as-needed] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc] ==> lib [irc]
+    arg [-lsvml] ==> lib [svml]
+    arg [-Bdynamic] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-Bstatic] ==> ignore
+    arg [-lirc_s] ==> lib [irc_s]
+    arg [-Bdynamic] ==> ignore
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin] ==> [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu/] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/lib/../lib/] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu/] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib/] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../] ==> [/usr/lib]
+  collapse library dir [/lib64] ==> [/lib64]
+  collapse library dir [/lib/] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  implicit libs: [imf;svml;irng;m;ipgo;decimal;cilkrts;stdc++;gcc;gcc_s;irc;svml;c;gcc;gcc_s;irc_s;dl;c]
+  implicit dirs: [/opt/intel/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin;/usr/lib/gcc/x86_64-linux-gnu/7;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib64;/lib;/usr/lib/i386-linux-gnu]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9f399/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9f399.dir/build.make CMakeFiles/cmTC_9f399.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f399.dir/feature_tests.c.o
+/opt/intel/bin/icc   -O3 -ip -fp-model precise    -std=c11 -o CMakeFiles/cmTC_9f399.dir/feature_tests.c.o   -c /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_9f399
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f399.dir/link.txt --verbose=1
+/opt/intel/bin/icc -O3 -ip -fp-model precise     -rdynamic CMakeFiles/cmTC_9f399.dir/feature_tests.c.o  -o cmTC_9f399 
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_67f5b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_67f5b.dir/build.make CMakeFiles/cmTC_67f5b.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_67f5b.dir/feature_tests.c.o
+/opt/intel/bin/icc   -O3 -ip -fp-model precise    -std=c99 -o CMakeFiles/cmTC_67f5b.dir/feature_tests.c.o   -c /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_67f5b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67f5b.dir/link.txt --verbose=1
+/opt/intel/bin/icc -O3 -ip -fp-model precise     -rdynamic CMakeFiles/cmTC_67f5b.dir/feature_tests.c.o  -o cmTC_67f5b 
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c89] compiler features compiled with the following output:
+Change Dir: /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e2764/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2764.dir/build.make CMakeFiles/cmTC_e2764.dir/build
+make[1]: Entering directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2764.dir/feature_tests.c.o
+/opt/intel/bin/icc   -O3 -ip -fp-model precise    -std=c89 -o CMakeFiles/cmTC_e2764.dir/feature_tests.c.o   -c /home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e2764
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2764.dir/link.txt --verbose=1
+/opt/intel/bin/icc -O3 -ip -fp-model precise     -rdynamic CMakeFiles/cmTC_e2764.dir/feature_tests.c.o  -o cmTC_e2764 
+make[1]: Leaving directory '/home/albd/research/FHIaims/running_copy/FHIaims/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros

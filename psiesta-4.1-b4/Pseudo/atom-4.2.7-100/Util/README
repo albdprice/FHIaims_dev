@@ -1,0 +1,5 @@
+This directory contains some utility programs that convert pseudopotential
+files from one format to another (ASCII, binary, netCDF).
+
+The Ps2Inp subdirectory contains code to attempt to generate an input file
+for ATOM from a pseudopotential file.

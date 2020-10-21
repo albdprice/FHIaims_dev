@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libfortjson.a  CMakeFiles/fortjson.dir/src/fortjson.f90.o CMakeFiles/fortjson.dir/src/fjson_constants.f90.o CMakeFiles/fortjson.dir/src/fjson_datatype.f90.o CMakeFiles/fortjson.dir/src/fjson_precision.f90.o CMakeFiles/fortjson.dir/src/fjson_rw.f90.o CMakeFiles/fortjson.dir/src/fjson_setup.f90.o CMakeFiles/fortjson.dir/src/fjson_utilities.f90.o
+/usr/bin/ranlib ../../lib/libfortjson.a

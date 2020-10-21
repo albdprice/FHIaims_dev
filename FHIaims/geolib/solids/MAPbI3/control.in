@@ -1,0 +1,5 @@
+xc 		pbe
+k_grid		4 4 3
+relativistic	atomic_zora scalar
+vdw_correction_hirshfeld
+dry_run

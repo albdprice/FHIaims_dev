@@ -1,0 +1,16 @@
+         USE MPI__GXC_integer_v
+         USE MPI__GXC_integer8_v
+         USE MPI__GXC_logical_v
+         USE MPI__GXC_character_v
+         USE MPI__GXC_integer_s
+         USE MPI__GXC_integer8_s
+         USE MPI__GXC_logical_s
+         USE MPI__GXC_character_s
+         USE MPI__GXC_integer_sv
+         USE MPI__GXC_integer8_sv
+         USE MPI__GXC_logical_sv
+         USE MPI__GXC_character_sv
+         USE MPI__GXC_integer_vs
+         USE MPI__GXC_integer8_vs
+         USE MPI__GXC_logical_vs
+         USE MPI__GXC_character_vs

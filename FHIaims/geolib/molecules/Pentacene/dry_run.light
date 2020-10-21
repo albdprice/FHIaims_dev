@@ -1,0 +1,589 @@
+------------------------------------------------------------
+          Invoking FHI-aims ...
+
+          When using FHI-aims, please cite the following reference:
+
+          Volker Blum, Ralf Gehrke, Felix Hanke, Paula Havu,
+          Ville Havu, Xinguo Ren, Karsten Reuter, and Matthias Scheffler,
+          'Ab Initio Molecular Simulations with Numeric Atom-Centered Orbitals',
+          Computer Physics Communications 180, 2175-2196 (2009)
+
+          For any questions about FHI-aims, please visit the aimsclub website
+          with its forums and wiki. Contributions to both the forums and the
+          wiki are warmly encouraged - they are for you, and everyone is welcome there.
+
+------------------------------------------------------------
+
+
+
+  Date     :  20190407, Time     :  172445.295
+  Time zero on CPU 1             :   0.123150000000000E-01  s.
+  Internal wall clock time zero  :           323889885.295  s.
+
+  FHI-aims created a unique identifier for this run for later identification
+  aims_uuid : 374C3660-EA94-4FF9-A736-B4B4F2EF3C9B
+
+  Build configuration of the current instance of FHI-aims
+  -------------------------------------------------------
+  FHI-aims version      : 190305
+  Commit number         : 81c1aa51d
+  CMake host system     : Linux-4.4.162-94.72-default
+  CMake version         : 3.5.2
+  Fortran compiler      : /mpcdf/soft/SLE_12_SP3/packages/skylake/intel/18.0.5/bin/ifort (Intel) version 18.0.5.20180823
+  Fortran compiler flags: -O3 -ip -fp-model precise
+  C compiler            : /mpcdf/soft/SLE_12_SP3/packages/skylake/intel/18.0.5/bin/icc (Intel) version 18.0.5.20180823
+  C compiler flags      : -O3
+  Architecture          :
+  Using C files
+  Linking against: /mpcdf/soft/SLE_12_SP3/packages/x86_64/intel_parallel_studio/2018.4/mkl/lib/intel64/libmkl_intel_lp64.so
+                   /mpcdf/soft/SLE_12_SP3/packages/x86_64/intel_parallel_studio/2018.4/mkl/lib/intel64/libmkl_sequential.so
+                   /mpcdf/soft/SLE_12_SP3/packages/x86_64/intel_parallel_studio/2018.4/mkl/lib/intel64/libmkl_core.so
+
+
+  Performing system and environment tests:
+  *** Environment variable OMP_NUM_THREADS is not set
+  *** For performance reasons you might want to set it to 1
+  | Maximum stacksize for task 0: unlimited
+  | Current stacksize for task 0: unlimited
+
+  Obtaining array dimensions for all initial allocations:
+  
+  -----------------------------------------------------------------------
+  Parsing control.in (first pass over file, find array dimensions only).
+  The contents of control.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of control.in .
+  -----------------------------------------------------------------------
+  
+  xc pbe
+  vdw_correction_hirshfeld
+  dry_run
+  ################################################################################
+  #
+  #  FHI-aims code project
+  #  VB, Fritz-Haber Institut, 2009
+  #
+  #  Suggested "light" defaults for C atom (to be pasted into control.in file)
+  #  Be sure to double-check any results obtained with these settings for post-processing,
+  #  e.g., with the "tight" defaults and larger basis sets.
+  #
+  ################################################################################
+    species        C
+  #     global species definitions
+      nucleus             6
+      mass                12.0107
+  #
+      l_hartree           4
+  #
+      cut_pot             3.5  1.5  1.0
+      basis_dep_cutoff    1e-4
+  #
+      radial_base         34 5.0
+      radial_multiplier   1
+      angular_grids specified
+        division   0.3326   50
+        division   0.5710  110
+        division   0.7727  194
+        division   0.8772  302
+  #      division   0.9334  434
+  #      division   0.9625  590
+  #      division   0.9924  770
+  #      division   1.0230  974
+  #      division   1.4589 1202
+  #     outer_grid  974
+       outer_grid 302
+  ################################################################################
+  #
+  #  Definition of "minimal" basis
+  #
+  ################################################################################
+  #     valence basis states
+      valence      2  s   2.
+      valence      2  p   2.
+  #     ion occupancy
+      ion_occ      2  s   1.
+      ion_occ      2  p   1.
+  ################################################################################
+  #
+  #  Suggested additional basis functions. For production calculations,
+  #  uncomment them one after another (the most important basis functions are
+  #  listed first).
+  #
+  #  Constructed for dimers: 1.0 A, 1.25 A, 1.5 A, 2.0 A, 3.0 A
+  #
+  ################################################################################
+  #  "First tier" - improvements: -1214.57 meV to -155.61 meV
+       hydro 2 p 1.7
+       hydro 3 d 6
+       hydro 2 s 4.9
+  #  "Second tier" - improvements: -67.75 meV to -5.23 meV
+  #     hydro 4 f 9.8
+  #     hydro 3 p 5.2
+  #     hydro 3 s 4.3
+  #     hydro 5 g 14.4
+  #     hydro 3 d 6.2
+  #  "Third tier" - improvements: -2.43 meV to -0.60 meV
+  #     hydro 2 p 5.6
+  #     hydro 2 s 1.4
+  #     hydro 3 d 4.9
+  #     hydro 4 f 11.2
+  #  "Fourth tier" - improvements: -0.39 meV to -0.18 meV
+  #     hydro 2 p 2.1
+  #     hydro 5 g 16.4
+  #     hydro 4 d 13.2
+  #     hydro 3 s 13.6
+  #     hydro 4 f 17.6
+  #  Further basis functions - improvements: -0.08 meV and below
+  #     hydro 3 s 2
+  #     hydro 3 p 6
+  #     hydro 4 d 20
+  ################################################################################
+  #
+  #  FHI-aims code project
+  #  VB, Fritz-Haber Institut, 2009
+  #
+  #  Suggested "light" defaults for H atom (to be pasted into control.in file)
+  #  Be sure to double-check any results obtained with these settings for post-processing,
+  #  e.g., with the "tight" defaults and larger basis sets.
+  #
+  ################################################################################
+    species        H
+  #     global species definitions
+      nucleus             1
+      mass                1.00794
+  #
+      l_hartree           4
+  #
+      cut_pot             3.5  1.5  1.0
+      basis_dep_cutoff    1e-4
+  #
+      radial_base         24 5.0
+      radial_multiplier   1
+      angular_grids       specified
+        division   0.2421   50
+        division   0.3822  110
+        division   0.4799  194
+        division   0.5341  302
+  #      division   0.5626  434
+  #      division   0.5922  590
+  #      division   0.6542  770
+  #      division   0.6868 1202
+  #      outer_grid  770
+        outer_grid  302
+  ################################################################################
+  #
+  #  Definition of "minimal" basis
+  #
+  ################################################################################
+  #     valence basis states
+      valence      1  s   1.
+  #     ion occupancy
+      ion_occ      1  s   0.5
+  ################################################################################
+  #
+  #  Suggested additional basis functions. For production calculations,
+  #  uncomment them one after another (the most important basis functions are
+  #  listed first).
+  #
+  #  Basis constructed for dimers: 0.5 A, 0.7 A, 1.0 A, 1.5 A, 2.5 A
+  #
+  ################################################################################
+  #  "First tier" - improvements: -1014.90 meV to -62.69 meV
+       hydro 2 s 2.1
+       hydro 2 p 3.5
+  #  "Second tier" - improvements: -12.89 meV to -1.83 meV
+  #     hydro 1 s 0.85
+  #     hydro 2 p 3.7
+  #     hydro 2 s 1.2
+  #     hydro 3 d 7
+  #  "Third tier" - improvements: -0.25 meV to -0.12 meV
+  #     hydro 4 f 11.2
+  #     hydro 3 p 4.8
+  #     hydro 4 d 9
+  #     hydro 3 s 3.2
+  
+  -----------------------------------------------------------------------
+  Completed first pass over input file control.in .
+  -----------------------------------------------------------------------
+  
+  
+  -----------------------------------------------------------------------
+  Parsing geometry.in (first pass over file, find array dimensions only).
+  The contents of geometry.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of geometry.in .
+  -----------------------------------------------------------------------
+  
+  atom 0.0000000000000000 3.6643699999999999 0.7251600000000000 C
+  atom 0.0000000000000000 3.6643699999999999 -0.7251600000000000 C
+  atom 0.0000000000000000 4.9241599999999996 1.4050700000000000 C
+  atom 0.0000000000000000 2.4586800000000002 1.4027700000000001 C
+  atom 0.0000000000000000 4.9241599999999996 -1.4050700000000000 C
+  atom 0.0000000000000000 2.4586800000000002 -1.4027700000000001 C
+  atom 0.0000000000000000 6.0944300000000000 -0.7141300000000000 C
+  atom 0.0000000000000000 6.0944300000000000 0.7141300000000000 C
+  atom 0.0000000000000000 1.2218199999999999 0.7262400000000000 C
+  atom 0.0000000000000000 1.2218199999999999 -0.7262400000000000 C
+  atom 0.0000000000000000 0.0000000000000000 1.4032600000000000 C
+  atom 0.0000000000000000 0.0000000000000000 -1.4032600000000000 C
+  atom 0.0000000000000000 -1.2218199999999999 0.7262400000000000 C
+  atom 0.0000000000000000 -1.2218199999999999 -0.7262400000000000 C
+  atom 0.0000000000000000 -2.4586800000000002 1.4027700000000001 C
+  atom 0.0000000000000000 -2.4586800000000002 -1.4027700000000001 C
+  atom 0.0000000000000000 -3.6643699999999999 0.7251600000000000 C
+  atom 0.0000000000000000 -3.6643699999999999 -0.7251600000000000 C
+  atom 0.0000000000000000 -4.9241599999999996 1.4050700000000000 C
+  atom 0.0000000000000000 -4.9241599999999996 -1.4050700000000000 C
+  atom 0.0000000000000000 -6.0944300000000000 0.7141300000000000 C
+  atom 0.0000000000000000 -6.0944300000000000 -0.7141300000000000 C
+  atom 0.0000000000000000 4.9248099999999999 2.4878600000000000 H
+  atom 0.0000000000000000 2.4601799999999998 2.4863499999999998 H
+  atom 0.0000000000000000 4.9248099999999999 -2.4878600000000000 H
+  atom 0.0000000000000000 2.4601799999999998 -2.4863499999999998 H
+  atom 0.0000000000000000 7.0379399999999999 -1.2435700000000001 H
+  atom 0.0000000000000000 7.0379399999999999 1.2435700000000001 H
+  atom 0.0000000000000000 0.0000000000000000 2.4867300000000001 H
+  atom 0.0000000000000000 0.0000000000000000 -2.4867300000000001 H
+  atom 0.0000000000000000 -2.4601799999999998 2.4863499999999998 H
+  atom 0.0000000000000000 -2.4601799999999998 -2.4863499999999998 H
+  atom 0.0000000000000000 -4.9248099999999999 2.4878600000000000 H
+  atom 0.0000000000000000 -4.9248099999999999 -2.4878600000000000 H
+  atom 0.0000000000000000 -7.0379399999999999 1.2435700000000001 H
+  atom 0.0000000000000000 -7.0379399999999999 -1.2435700000000001 H
+  
+  -----------------------------------------------------------------------
+  Completed first pass over input file geometry.in .
+  -----------------------------------------------------------------------
+  
+
+  Basic array size parameters:
+  | Number of species                 :        2
+  | Number of atoms                   :       36
+  | Max. basis fn. angular momentum   :        2
+  | Max. atomic/ionic basis occupied n:        2
+  | Max. number of basis fn. types    :        2
+  | Max. radial fns per species/type  :        3
+  | Max. logarithmic grid size        :     1277
+  | Max. radial integration grid size :       34
+  | Max. angular integration grid size:      302
+  | Max. angular grid division number :        8
+  | Radial grid for Hartree potential :     1277
+  | Number of spin channels           :        1
+
+------------------------------------------------------------
+          Reading file control.in.
+------------------------------------------------------------
+  XC: Using PBE gradient-corrected functionals.
+  Found the 'dry_run' option. This run will only read control.in and geometry.in.
+  The run will stop before any work-intensive part (i.e., before initialize_scf is first invoked).
+ 
+  Reading configuration options for species C                   .
+  | Found nuclear charge :   6.0000
+  | Found atomic mass :    12.0107000000000      amu
+  | Found l_max for Hartree potential  :   4
+  | Found cutoff potl. onset [A], width [A], scale factor :    3.50000    1.50000    1.00000
+  | Threshold for basis-dependent cutoff potential is   0.100000E-03
+  | Found data for basic radial integration grid :    34 points, outermost radius =    5.000 A
+  | Found multiplier for basic radial grid :   1
+  | Found angular grid specification: user-specified.
+  | Specified grid contains     5 separate shells.
+  | Check grid settings after all constraints further below.
+  | Found free-atom valence shell :  2 s   2.000
+  | Found free-atom valence shell :  2 p   2.000
+  | No ionic wave fns used. Skipping ion_occ.
+  | No ionic wave fns used. Skipping ion_occ.
+  | Found hydrogenic basis function :  2 p   1.700
+  | Found hydrogenic basis function :  3 d   6.000
+  | Found hydrogenic basis function :  2 s   4.900
+  Species C                   : Missing cutoff potential type.
+  Defaulting to exp(1/x)/(1-x)^2 type cutoff potential.
+  Species C : No 'logarithmic' tag. Using default grid for free atom:
+  | Default logarithmic grid data [bohr] : 0.1000E-03 0.1000E+03 0.1012E+01
+  Species C : On-site basis accuracy parameter (for Gram-Schmidt orthonormalisation) not specified.
+  Using default value basis_acc =  0.1000000E-03.
+  Species C                   : Using default innermost maximum threshold i_radial=  2 for radial functions.
+  Species C                   : Default cutoff onset for free atom density etc. : 0.35000000E+01 AA.
+  Species C                   : Basic radial grid will be enhanced according to radial_multiplier =   1, to contain    34 grid points.
+ 
+  Reading configuration options for species H                   .
+  | Found nuclear charge :   1.0000
+  | Found atomic mass :    1.00794000000000      amu
+  | Found l_max for Hartree potential  :   4
+  | Found cutoff potl. onset [A], width [A], scale factor :    3.50000    1.50000    1.00000
+  | Threshold for basis-dependent cutoff potential is   0.100000E-03
+  | Found data for basic radial integration grid :    24 points, outermost radius =    5.000 A
+  | Found multiplier for basic radial grid :   1
+  | Found angular grid specification: user-specified.
+  | Specified grid contains     5 separate shells.
+  | Check grid settings after all constraints further below.
+  | Found free-atom valence shell :  1 s   1.000
+  | No ionic wave fns used. Skipping ion_occ.
+  | Found hydrogenic basis function :  2 s   2.100
+  | Found hydrogenic basis function :  2 p   3.500
+  Species H                   : Missing cutoff potential type.
+  Defaulting to exp(1/x)/(1-x)^2 type cutoff potential.
+  Species H : No 'logarithmic' tag. Using default grid for free atom:
+  | Default logarithmic grid data [bohr] : 0.1000E-03 0.1000E+03 0.1012E+01
+  Species H : On-site basis accuracy parameter (for Gram-Schmidt orthonormalisation) not specified.
+  Using default value basis_acc =  0.1000000E-03.
+  Species H                   : Using default innermost maximum threshold i_radial=  2 for radial functions.
+  Species H                   : Default cutoff onset for free atom density etc. : 0.35000000E+01 AA.
+  Species H                   : Basic radial grid will be enhanced according to radial_multiplier =   1, to contain    24 grid points.
+ 
+  Finished reading input file 'control.in'. Consistency checks are next.
+ 
+  MPI_IN_PLACE appears to work with this MPI implementation.
+  | Keeping use_mpi_in_place .true. (see manual).
+  Target number of points in a grid batch is not set. Defaulting to  100
+  Method for grid partitioning is not set. Defaulting to 'maxmin' partitioning.
+  Batch size limit is not set. Defaulting to    200
+  By default, will store active basis functions for each batch.
+  If in need of memory, prune_basis_once .false. can be used to disable this option.
+  communication_type for Hartree potential was not specified.
+  Defaulting to calc_hartree .
+ * Attention: 
+ * You may want to set distributed_spline_storage to .true. in order to save memory.
+ * This doesn't harm performance and is perfectly ok unless:
+ * - you get error messages in postprocessing (about missing atoms in get_rho_multipole_spl)
+ * - you need full spline storage in hirshfeld_analysis
+  Defaulting to Pulay charge density mixer.
+  Pulay mixer: Number of relevant iterations not set.
+  Defaulting to    8 iterations.
+  Pulay mixer: Number of initial linear mixing iterations not set.
+  Defaulting to    0 iterations.
+  Work space size for distributed Hartree potential not set.
+  Defaulting to   0.200000E+03 MB.
+  Mixing parameter for charge density mixing has not been set.
+  Using default: charge_mix_param =     0.0500.
+  The mixing parameter will be adjusted in iteration number     2 of the first full s.c.f. cycle only.
+  Algorithm-dependent basis array size parameters:
+  | n_max_pulay                         :        8
+ * Notice: The s.c.f. convergence criterion sc_accuracy_rho was not provided.
+ * We used to stop in this case, and ask the user to provide reasonable
+ * scf convergence criteria. However, this led some users to employ criteria
+ * that led to extremely long run times, e.g., for simple relaxation.
+ * We now preset a default value for sc_accuracy_rho if it is not set.
+ * You may still wish to check if this setting is too tight or too loose for your needs.
+ * Based on n_atoms, FHI-aims chose sc_accuracy_rho =  0.600000E-05 .
+  Maximum number of self-consistency iterations not provided.
+  Presetting  1000 iterations.
+  Presetting      1001 iterations before the initial mixing cycle
+  is restarted anyway using the sc_init_iter criterion / keyword.
+  Presetting a factor      1.000 between actual scf density residual
+  and density convergence criterion sc_accuracy_rho below which sc_init_iter
+  takes no effect.
+ * No s.c.f. convergence criteria (sc_accuracy_*) were provided in control.in.
+ * The run will proceed with a reasonable default guess, but please check whether.
+ * the s.c.f. cycles seem to take too much or too little time.
+  Calculation of forces was not defined in control.in. No forces will be calculated.
+  Geometry relaxation not requested: no relaxation will be performed.
+  No accuracy limit for integral partition fn. given. Defaulting to  0.1000E-14.
+  No threshold value for u(r) in integrations given. Defaulting to  0.1000E-05.
+  No occupation type (smearing scheme) given. Defaulting to Gaussian broadening, width =  0.1000E-01 eV.
+  The width will be adjusted in iteration number     2 of the first full s.c.f. cycle only.
+  S.C.F. convergence parameters will be adjusted in iteration number     2 of the first full s.c.f. cycle only.
+  No accuracy for occupation numbers given. Defaulting to  0.1000E-12.
+  No threshold value for occupation numbers given. Defaulting to  0.0000E+00.
+  No accuracy for fermi level given. Defaulting to  0.1000E-19.
+  Maximum # of iterations to find E_F not set. Defaulting to  200.
+  Preferred method for the eigenvalue solver ('KS_method') not specified in 'control.in'.
+  Defaulting to serial version, 'lapack_fast'.
+  Will not use alltoall communication since running on < 1024 CPUs.
+  Threshold for basis singularities not set.
+  Default threshold for basis singularities:  0.1000E-04
+  partition_type (choice of integration weights) for integrals was not specified.
+  | Using a version of the partition function of Stratmann and coworkers ('stratmann_sparse').
+  | At each grid point, the set of atoms used to build the partition table is smoothly restricted to
+  | only those atoms whose free-atom density would be non-zero at that grid point.
+  Partitioning for Hartree potential was not defined. Using partition_type for integrals.
+  | Adjusted default value of keyword multip_moments_threshold to:       0.10000000E-11
+  | This value may affect high angular momentum components of the Hartree potential in periodic systems.
+  Spin handling was not defined in control.in. Defaulting to unpolarized case.
+  No q(lm)/r^(l+1) cutoff set for long-range Hartree potential.
+  | Using default value of  0.100000E-09 .
+  | Verify using the multipole_threshold keyword.
+  Defaulting to new monopole extrapolation.
+  Density update method: automatic selection selected.
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+          Reading geometry description geometry.in.
+------------------------------------------------------------
+ * Warning! You did not set the 'relativistic' flag in input file 'control.in'.
+ * Since you are not attempting to treat any elements beyond Ca(Z=20), FHI-aims
+ * will default to 'relativistic none'.
+ * You must ensure that this is really what you want!!
+ * For example, DO NOT compute total-energy differences between results from
+ * different settings of the 'relativistic' flag.
+  Input structure read successfully.
+  The structure contains       36 atoms,  and a total of        146.000 electrons.
+
+  Input geometry:
+  | No unit cell requested.
+  | Atomic structure:
+  |       Atom                x [A]            y [A]            z [A]
+  |    1: Species C             0.00000000        3.66437000        0.72516000
+  |    2: Species C             0.00000000        3.66437000       -0.72516000
+  |    3: Species C             0.00000000        4.92416000        1.40507000
+  |    4: Species C             0.00000000        2.45868000        1.40277000
+  |    5: Species C             0.00000000        4.92416000       -1.40507000
+  |    6: Species C             0.00000000        2.45868000       -1.40277000
+  |    7: Species C             0.00000000        6.09443000       -0.71413000
+  |    8: Species C             0.00000000        6.09443000        0.71413000
+  |    9: Species C             0.00000000        1.22182000        0.72624000
+  |   10: Species C             0.00000000        1.22182000       -0.72624000
+  |   11: Species C             0.00000000        0.00000000        1.40326000
+  |   12: Species C             0.00000000        0.00000000       -1.40326000
+  |   13: Species C             0.00000000       -1.22182000        0.72624000
+  |   14: Species C             0.00000000       -1.22182000       -0.72624000
+  |   15: Species C             0.00000000       -2.45868000        1.40277000
+  |   16: Species C             0.00000000       -2.45868000       -1.40277000
+  |   17: Species C             0.00000000       -3.66437000        0.72516000
+  |   18: Species C             0.00000000       -3.66437000       -0.72516000
+  |   19: Species C             0.00000000       -4.92416000        1.40507000
+  |   20: Species C             0.00000000       -4.92416000       -1.40507000
+  |   21: Species C             0.00000000       -6.09443000        0.71413000
+  |   22: Species C             0.00000000       -6.09443000       -0.71413000
+  |   23: Species H             0.00000000        4.92481000        2.48786000
+  |   24: Species H             0.00000000        2.46018000        2.48635000
+  |   25: Species H             0.00000000        4.92481000       -2.48786000
+  |   26: Species H             0.00000000        2.46018000       -2.48635000
+  |   27: Species H             0.00000000        7.03794000       -1.24357000
+  |   28: Species H             0.00000000        7.03794000        1.24357000
+  |   29: Species H             0.00000000        0.00000000        2.48673000
+  |   30: Species H             0.00000000        0.00000000       -2.48673000
+  |   31: Species H             0.00000000       -2.46018000        2.48635000
+  |   32: Species H             0.00000000       -2.46018000       -2.48635000
+  |   33: Species H             0.00000000       -4.92481000        2.48786000
+  |   34: Species H             0.00000000       -4.92481000       -2.48786000
+  |   35: Species H             0.00000000       -7.03794000        1.24357000
+  |   36: Species H             0.00000000       -7.03794000       -1.24357000
+  |
+
+  | The smallest distance between any two atoms is         1.08190472 AA.
+  |
+  | The first atom of this pair is atom number                      7 .
+  | The second atom of this pair is atom number                    27 .
+
+  Number of empty states per atom not set in control.in - providing a guess from actual geometry.
+  | Total number of empty states used during s.c.f. cycle:       87
+  If you use a very high smearing, use empty_states (per atom!) in control.in to increase this value.
+
+  Structure-dependent array size parameters: 
+  | Maximum number of distinct radial functions  :        9
+  | Maximum number of basis functions            :      378
+  | Number of Kohn-Sham states (occupied + empty):      160
+------------------------------------------------------------
+
+------------------------------------------------------------
+          Preparing all fixed parts of the calculation.
+------------------------------------------------------------
+  Determining machine precision:
+    2.225073858507201E-308
+  Setting up grids for atomic and cluster calculations.
+
+  Creating wave function, potential, and density for free atoms.
+
+  Species: C
+
+  List of occupied orbitals and eigenvalues:
+    n    l              occ      energy [Ha]    energy [eV]
+    1    0           2.0000       -10.038835      -273.1706
+    2    0           2.0000        -0.502696       -13.6791
+    2    1           2.0000        -0.191971        -5.2238
+
+
+  Species: H
+
+  List of occupied orbitals and eigenvalues:
+    n    l              occ      energy [Ha]    energy [eV]
+    1    0           1.0000        -0.237589        -6.4651
+
+  Creating fixed part of basis set: Ionic, confined, hydrogenic.
+ 
+  C                    hydrogenic:
+ 
+  List of hydrogenic basis orbitals: 
+    n    l      effective z      eigenvalue [eV]  inner max. [A]     outer max. [A]     outer radius [A]   
+    2    1         1.700000        -9.7616           1.230570           1.230570           4.607917
+    3    2         6.000000       -54.4224           0.792453           0.792453           3.883070
+    2    0         4.900000       -81.6679           0.082559           0.562749           3.078220
+ 
+ 
+  H                    hydrogenic:
+ 
+  List of hydrogenic basis orbitals: 
+    n    l      effective z      eigenvalue [eV]  inner max. [A]     outer max. [A]     outer radius [A]   
+    2    0         2.100000       -14.9728           0.193243           1.317208           4.583499
+    2    1         3.500000       -41.6669           0.602369           0.602369           3.723403
+ 
+
+  Adding cutoff potential to free-atom effective potential.
+  Creating atomic-like basis functions for current effective potential.
+
+  Species C                   :
+
+  List of atomic basis orbitals and eigenvalues:
+    n    l      energy [Ha]    energy [eV]    outer radius [A]
+    1    0       -10.038835      -273.1706       1.934409
+    2    0        -0.502696       -13.6791       4.496620
+    2    1        -0.191971        -5.2238       4.551928
+
+
+  Species H                   :
+
+  List of atomic basis orbitals and eigenvalues:
+    n    l      energy [Ha]    energy [eV]    outer radius [A]
+    1    0        -0.237589        -6.4651       4.527807
+
+  Assembling full basis from fixed parts.
+  | Species C :   atomic orbital   1 s accepted.
+  | Species C :    hydro orbital   2 s accepted.
+  | Species C :   atomic orbital   2 s accepted.
+  | Species C :   atomic orbital   2 p accepted.
+  | Species C :    hydro orbital   2 p accepted.
+  | Species C :    hydro orbital   3 d accepted.
+  | Species H :   atomic orbital   1 s accepted.
+  | Species H :    hydro orbital   2 s accepted.
+  | Species H :    hydro orbital   2 p accepted.
+ 
+  Basis size parameters after reduction:
+  | Total number of radial functions:        9
+  | Total number of basis functions :      378
+ 
+  Per-task memory consumption for arrays in subroutine allocate_ext:
+  |           2.216392MB.
+  Testing on-site integration grid accuracy.
+  |  Species  Function  <phi|h_atom|phi> (log., in eV)  <phi|h_atom|phi> (rad., in eV)
+           1        1               -273.1705927575               -273.1705631502
+           1        2                -10.7109323394                -10.7107120040
+           1        3                 17.4381822249                 17.4352413227
+           1        4                 -5.2255326536                 -5.2270484749
+           1        5                  8.6835629244                  8.6603288370
+           1        6                 27.4952418980                 27.4953360191
+           2        7                 -6.4663192853                 -6.4651273558
+           2        8                 13.7111246313                 13.7170609718
+           2        9                 25.2673269279                 25.2674696378
+
+  Preparing densities etc. for the partition functions (integrals / Hartree potential).
+
+  Preparations completed.
+  max(cpu_time)          :      0.079 s.
+  Wall clock time (cpu1) :      0.079 s.
+------------------------------------------------------------
+
+  Initializing index lists of integration centers etc. from given atomic structure:
+  | Number of centers in hartree potential         :        36
+  | Number of centers in hartree multipole         :        36
+  | Number of centers in electron density summation:        36
+  | Number of centers in basis integrals           :        36
+  | Number of centers in integrals                 :        36
+  | Number of centers in hamiltonian               :        36
+
+----------------------------------------
+  This was a dry run only, to check all input files.
+  So far, all input files must have looked valid.
+  This run will be stopped at this point.
+----------------------------------------
+**Error! elsi_finalize: Invalid handle! Not initialized.

@@ -1,0 +1,4 @@
+This directory contains code to generate an input file for ATOM from
+a .psf or .vps file.
+*NOTE* that the generation is not complete in the case of core-corrections,
+as the matching radius is not part of the pseudopotential data.

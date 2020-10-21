@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -N reg
+#PBS -l nodes=1:ppn=20
+#PBS -l walltime=06:00:00
+#PBS -m ea
+#PBS -M wy29@duke.edu
+#PBS -j oe
+#PBS -q short
+
+ulimit -s unlimited
+module load gcc-7.1
+module load intel-2018
+module load python3.3
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export MKL_DYNAMIC=FALSE
+
+dir=/home/wy29/aims_devel/regression_tests
+bin=/home/wy29/aims_devel/build/aims.190712.scalapack.mpi.x
+
+cd $PBS_O_WORKDIR
+
+python3 $dir/regressiontools.py full $dir/references_lastrelease $bin --cpus 20 --force

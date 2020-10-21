@@ -1,0 +1,7 @@
+lattice_vector         0.00000000        2.04931281        2.04931281
+lattice_vector         2.04931281        0.00000000        2.04931281
+lattice_vector         2.04931281        2.04931281        0.00000000
+atom_frac         0.00000000        0.00000000        0.00000000  Li
+    constrain_relaxation .true.
+atom_frac         0.50000000        0.50000000        0.50000000  F
+

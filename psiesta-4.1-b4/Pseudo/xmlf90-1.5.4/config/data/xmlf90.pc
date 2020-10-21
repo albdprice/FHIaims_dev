@@ -1,0 +1,12 @@
+prefix=/home/lleblanc/src/psiesta-4.1-b4/Pseudo/xmlf90-1.5.4
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: XMLF90
+Description: XML Fortran Library
+Version: 1.5.4
+URL: https://launchpad.net/xmlf90/
+Libs: -L${libdir} -lxmlf90
+Cflags: -I${includedir}

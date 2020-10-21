@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE public test>
+
+<!-- Test of XML parsing 
+      Alberto Garcia, May-June 2003 -->
+
+<test version   =  "0.1">
+
+<preamble>A small file to show the 
+          parser in action ...
+</preamble>
+
+<title>Mary had a &lt;little&gt; lamb who liked standard entities</title>
+
+<misc disposition="throw_away" 
+      other_att = 'single quotes to enclose "Oh!"...'  >
+
+  <single what="An 'empty' tag" />
+
+  <text>This is some text, split into two lines, 
+        which will be passed by means of two calls to the pcdata handler.
+  </text>
+
+</misc>
+</test>
+
+
+
+
+

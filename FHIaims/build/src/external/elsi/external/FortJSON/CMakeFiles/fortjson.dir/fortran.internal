@@ -1,0 +1,9 @@
+# The fortran modules provided by this target.
+provides
+ fjson_constants
+ fjson_datatype
+ fjson_precision
+ fjson_rw
+ fjson_setup
+ fjson_utilities
+ fortjson

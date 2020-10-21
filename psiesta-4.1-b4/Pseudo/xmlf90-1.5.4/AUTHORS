@@ -1,0 +1,9 @@
+Alberto Garcia (SAX, XPATH, WXML, Overall design)
+
+Jon Wakelin, Alberto Garcia (DOM subsystem)
+
+Jon Wakelin, Toby White (CML writing subsystem)
+
+Mart Reentmeester contributed the STRINGS module (See strings/m_strings.f90)
+
+Yann Pouillon contributed the autotools-based building system.

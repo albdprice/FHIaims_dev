@@ -1,0 +1,20 @@
+Some examples of the use of the SAX API in Fortran.
+
+Start by looking at the "simple" directory. That will give you a
+feeling for the workings of the parser. Feel free to experiment
+with "malforming" the "test.xml", and to turn on the "verbose"
+flag in the call to "xml_parse" in example.f90.
+
+"Count" contains a simple yet meaningful application of the parser: counting
+the number of elements of different types in an XML file.
+
+"Pseudo" is a scaled-down real-world physics application: reading a
+data file and populating internal structures. It showcases the use of
+"build_data_array" to turn homogeneous PCDATA sections into numerical arrays.
+
+"Features" shows small snippets of all the constructs recognized by the
+parser: treatment of quotes in attributes, standard entities, CDATA sections,
+declarations, comments, etc. 
+
+Alberto Garcia 
+wdpgaara at lg ehu es

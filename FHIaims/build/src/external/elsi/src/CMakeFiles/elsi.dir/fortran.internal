@@ -1,0 +1,31 @@
+# The fortran modules provided by this target.
+provides
+ elpa
+ elsi
+ elsi_c_interface
+ elsi_constant
+ elsi_datatype
+ elsi_decision
+ elsi_elpa
+ elsi_geo
+ elsi_get
+ elsi_input
+ elsi_lapack
+ elsi_malloc
+ elsi_mpi
+ elsi_ntpoly
+ elsi_occ
+ elsi_omm
+ elsi_output
+ elsi_pexsi
+ elsi_precision
+ elsi_redist
+ elsi_rw
+ elsi_set
+ elsi_setup
+ elsi_sips
+ elsi_solver
+ elsi_sort
+ elsi_util
+ f_ppexsi_interface
+ m_sips
